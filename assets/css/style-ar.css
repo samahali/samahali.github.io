@@ -1,0 +1,241 @@
+/*index.css*/
+/* Styles defined for the desktop or the bigger screen devices*/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+.cairo-body-text {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+.cairo-header {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Bold weight for headings */
+  font-style: normal;
+  font-size: 32px; /* Larger size for visibility */
+  line-height: 1.2;
+  font-variation-settings: "slnt" 0; /* Normal slant */
+}
+.cairo-cta {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600; /* Slightly bold for CTA visibility */
+  font-style: normal;
+  font-size: 18px; /* Medium to large size for clickable elements */
+  line-height: 1.4;
+  font-variation-settings: "slnt" 0; /* Normal slant */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 0.05em; /* Small letter-spacing for impact */
+  cursor: pointer; /* Indicate interactivity */
+}
+.cairo-article {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular weight for readability */
+  font-style: normal;
+  font-size: 16px; /* Standard text size for body content */
+  line-height: 1.6; /* Comfortable line height for reading */
+  font-variation-settings: "slnt" 0; /* Normal slant */
+  max-width: 800px; /* Optional: restrict line length for easier reading */
+  margin: 0 auto; /* Center align the text block */
+}
+.cairo-nav {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500; /* Medium weight for legibility */
+  font-style: normal;
+  font-size: 18px; /* Medium size for nav items */
+  line-height: 1.4;
+  font-variation-settings: "slnt" 0; /* Normal slant */
+  text-transform: uppercase; /* Uppercase for uniformity */
+  letter-spacing: 0.1em; /* Wider spacing for navigation clarity */
+}
+.cairo-ui {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular weight for standard UI text */
+  font-style: normal;
+  font-size: 14px; /* Smaller text size for UI elements */
+  line-height: 1.5; /* Adequate line height for UI readability */
+  font-variation-settings: "slnt" 0; /* Normal slant */
+  letter-spacing: 0.02em; /* Slight letter-spacing for UI clarity */
+}
+.menu { 
+    padding: 0 5rem; 
+} 
+
+.hamburger { 
+    display: none; 
+    color: #fff; 
+    font-size: 25px; 
+} 
+
+.cross-icon { 
+    display: none; 
+} 
+
+.menu .menu-list { 
+    display: flex; 
+    list-style: none; 
+} 
+
+.menu-list .menu-list-items { 
+    padding: 0.5rem 1rem; 
+} 
+
+@media screen and (min-width: 856px) and (max-width: 1024px) { 
+    .menu-list .menu-list-items { 
+        padding: 0.5rem 0.3rem; 
+    } 
+} 
+body { 
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+} 
+
+/* Header Navbar Styles */
+.navbar { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    /* flex-direction: row-reverse;*/
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background-image: linear-gradient(270deg, #74D7BB, #53C8B6, #35A99C); 
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /* Medium weight for legibility */
+    font-style: normal;
+    font-size: 18px; /* Medium size for nav items */
+    line-height: 1.4;
+    font-variation-settings: "slnt" 0; /* Normal slant */
+    text-transform: uppercase; /* Uppercase for uniformity */
+    letter-spacing: 0em; /* Wider spacing for navigation clarity */
+} 
+
+.logo { 
+    padding: 0 5rem; 
+} 
+
+.logo .logo-heading { 
+    color: #fff; 
+} 
+
+.menu { 
+    padding: 0 5rem; 
+} 
+
+.hamburger { 
+    display: none; 
+    color: #fff; 
+    font-size: 25px; 
+} 
+
+.cross-icon { 
+    display: none; 
+} 
+
+.menu .menu-list { 
+    display: flex; 
+    /* flex-direction: row-reverse;*/
+    list-style: none; 
+} 
+
+.menu-list .menu-list-items { 
+    padding: 0.5rem 1rem; 
+} 
+
+@media screen and (min-width: 856px) and (max-width: 1024px) { 
+    .menu-list .menu-list-items { 
+        padding: 0.5rem 0.3rem; 
+    } 
+} 
+
+/* Main Hero Section Styles */
+.hero { 
+    /* background-image: url('https://img.freepik.com/premium-vector/programming-pink-concept-with-people-scene-flat-cartoon-style-programmer-writes-code_198565-3010.jpg?w=996');  */
+    /* background-image: url("../images/25251927_7083597.svg"); */
+    background: url("../images/bg-wprog.svg") no-repeat left / contain border-box;
+} 
+.hero .intro { 
+    text-align: center; 
+    margin: 5 0rem; 
+} 
+
+.hero .intro-buttons { 
+    margin: 2rem 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-evenly; 
+} 
+.hero a.btn {
+    text-decoration: none;
+    margin-inline-start: 1rem;
+}
+
+/* About section styles */
+.about { 
+    background-image: linear-gradient(270deg, #363D73, #73d7bb);
+} 
+
+.about .about-text { 
+    width: 600px; 
+    color: #fff; 
+    padding: 5rem;
+    padding-left: 1rem; 
+    text-align: justify;
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px; 
+    line-height: 1.2;
+    font-variation-settings: "slnt" 0; /* Normal slant */
+} 
+
+.about .about-image img { 
+    padding: 5rem; 
+    padding-right: 1rem; 
+    box-shadow: #8a7e87 20px 5px 20px 0px;
+
+} 
+
+.my-card { 
+    border-radius: 0 10%;  
+} 
+.my-card:hover{
+    overflow: auto;
+}
+/* Education section */
+.edu .my-row .my-col { 
+    border-radius: 20% 0;
+} 
+
+/* utility classes */
+
+
+.ghost-btn:hover { 
+    background-color: #35A99C; 
+    color: #fff; 
+    transition: all 0.25s; 
+    border: 2px solid #35A99C; 
+} 
+
+.heading-span { 
+    font-weight: bolder; 
+} 
+
+.text-center { 
+    text-align: center; 
+} 
+
+.small-para { 
+    font-size: 16px; 
+    text-align: start;
+} 
