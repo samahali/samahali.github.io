@@ -1,22 +1,55 @@
 //index.js
+function includeHTML(elementId, filePath) {
+  fetch(filePath)
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+      })
+      .catch(error => console.error(`Error loading ${filePath}:`, error));
+}
 
-const hamburger = document.getElementById('hamburger'); 
-const menu = document.querySelector('.menu'); 
+// Include parts
+includeHTML("header", "templates/header.html");
+includeHTML("company", "templates/companies.html");
+includeHTML("about", "templates/about.html");
+includeHTML("projects", "templates/projects.html");
+includeHTML("skills", "templates/skills.html");
+includeHTML("edu", "templates/edu.html");
+includeHTML("contact", "templates/contact.html")
+includeHTML("footer", "templates/footer.html");    
 
-hamburger.addEventListener('click', function () { 
-    const hamIcon = this.querySelector('.hamburger-icon'); 
-    const crossIcon = this.querySelector('.cross-icon'); 
-    if (hamIcon.style.display === "none") { 
-        hamIcon.style.display = "inline-block"
-        menu.style.display = "none"
-        crossIcon.style.display = "none"
-    } 
-    else { 
-        crossIcon.style.display = "inline-block"
-        hamIcon.style.display = "none"
-        menu.style.display = "block"
-    } 
+// Initialize AOS
+AOS.init({
+  duration: 1000, // Animation duration in milliseconds
+  once: true, // Animation happens only once (when scrolled into view)
 });
+
+function showProjects(projectDiv) {
+  const projects = ["pfront", "pback", "pfull"];
+
+  projects.forEach((div) => {
+    const element = document.querySelector(`#${div}`);
+    if (element) {
+      if (div === projectDiv) {
+        element.classList.remove("d-none");
+      } else {
+        element.classList.add("d-none");
+      }
+    }
+  });
+}
+// Move text
+const text = "Samah Ali | سماح علي";
+let index = 0;
+function typeWriter() {
+  if (index < text.length) {
+    document.getElementById("typewriter").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, 100);
+  }
+}
+window.onload = typeWriter;
+
 // Function to fetch language data
 async function fetchLanguageData(lang) {
     const response = await fetch(`languages/${lang}.json`);
